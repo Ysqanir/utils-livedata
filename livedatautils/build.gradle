@@ -2,7 +2,31 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'org.jetbrains.dokka-android'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+ext {
+    bintrayRepo = 'LiveDataUtils'
+    bintrayName = 'cz.ysqanir.livedatautils'
+    libraryName = 'livedatautils'
 
+    publishedGroupId = 'cz.ysqanir'
+    artifact = 'LiveDataUtils'
+    libraryVersion = '1.0.0'
+
+    libraryDescription = 'Collection of utility classes and extensions working with LiveData'
+
+    siteUrl = 'https://github.com/Ysqanir/utils-livedata'
+    gitUrl = 'https://github.com/Ysqanir/utils-livedata.git'
+
+
+    developerId = 'ysqanir'
+    developerName = 'Vojtěch Šimša'
+    developerEmail = 'simsavojtech1@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 android {
     compileSdkVersion 28
     dokka {
@@ -32,4 +56,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
 
+}
+
+if(project.rootProject.file('local.properties').exists()){
+    apply from:'https://raw.githubusercontent.com/nuuneoi/Jcenter/master/installv1.gradle'
+    apply from:'https://raw.githubusercontent.com/nuuneoi/Jcenter/master/bintrayv1.gradle'
 }
