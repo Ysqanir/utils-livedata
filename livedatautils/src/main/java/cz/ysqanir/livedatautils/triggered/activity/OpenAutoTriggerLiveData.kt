@@ -6,7 +6,7 @@ import io.reactivex.Observable
  * AutoTriggerLiveData that allows external sources to post values
  * @see #TriggerLiveData
  *
- * @author Vojtěch Šimša <simsavojtech1@gmail.com>
+ * @author Vojtěch Šimša - simsavojtech1@gmail.com
  */
 class OpenAutoTriggerLiveData<A>(triggerOnActive: Boolean = true,
                                  triggerOnActiveWithValue: ((A?) -> Boolean) = { true },

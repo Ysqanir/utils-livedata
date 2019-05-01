@@ -13,7 +13,7 @@ import io.reactivex.disposables.Disposable
  * @param baseValue value to initialize instance with
  * @param obtainer RX Observable that returns values of expected type to use as values for this livedata instance
  *
- * @author Vojtěch Šimša <simsavojtech1@gmail.com>
+ * @author Vojtěch Šimša - simsavojtech1@gmail.com
  */
 open class AutoTriggerLiveData<A>(
         protected val triggerOnActive: Boolean = true,
@@ -25,8 +25,11 @@ open class AutoTriggerLiveData<A>(
         value = baseValue
     }
 
-    var disposable: Disposable? = null
+    private var disposable: Disposable? = null
 
+    /**
+     * Trigger obtainer to fetch new value
+     */
     fun trigger() {
         try {
             disposable?.dispose()

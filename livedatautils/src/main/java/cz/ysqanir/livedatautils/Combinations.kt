@@ -6,7 +6,7 @@ import androidx.lifecycle.MediatorLiveData
 /**
  * Collection of combination utils for LiveData
  *
- * @author Vojtěch Šimša <simsavojtech1@gmail.com>
+ * @author Vojtěch Šimša - simsavojtech1@gmail.com
  */
 class Combinations {
     companion object {

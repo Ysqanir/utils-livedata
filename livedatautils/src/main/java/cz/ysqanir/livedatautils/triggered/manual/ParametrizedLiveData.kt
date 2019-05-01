@@ -11,7 +11,7 @@ import io.reactivex.disposables.Disposable
  * @param baseValue value to initialize instance with
  * @param obtainerSource method to get RX Observable that returns values of expected type to use as values for this livedata instance
  *
- * @author Vojtěch Šimša <simsavojtech1@gmail.com>
+ * @author Vojtěch Šimša - simsavojtech1@gmail.com
  */
 class ParametrizedLiveData<A, B>(
         protected val disposeOnInactive: Boolean = false,
@@ -21,8 +21,12 @@ class ParametrizedLiveData<A, B>(
         value = baseValue
     }
 
-    var disposables = mutableListOf<Disposable>()
+    private var disposables = mutableListOf<Disposable>()
 
+    /**
+     * Create obtainer with provided parameter and trigger it to fetch new value
+     * @param parameter parameter for obtainerSource
+     */
     fun trigger(parameter: A) {
         clearDisposables()
         disposables.add(

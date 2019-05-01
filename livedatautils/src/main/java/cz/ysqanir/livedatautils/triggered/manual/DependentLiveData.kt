@@ -9,7 +9,7 @@ import androidx.lifecycle.MediatorLiveData
  * @param master controlling stream
  * @param slave controlled ParametrizedLiveData, taking type of a as parameter for trigger
  *
- * @author Vojtěch Šimša <simsavojtech1@gmail.com>
+ * @author Vojtěch Šimša - simsavojtech1@gmail.com
  */
 class DependentLiveData<A, B>(master: LiveData<A>, slave: ParametrizedLiveData<A, B>) : MediatorLiveData<B>() {
     init {
