@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OpenAutoTriggerLiveData - livedatautils</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">livedatautils</a>&nbsp;/&nbsp;<a href="../index.html">cz.ysqanir.livedatautils.triggered.activity</a>&nbsp;/&nbsp;<a href="./index.html">OpenAutoTriggerLiveData</a><br/>
+<br/>
+<h1>OpenAutoTriggerLiveData</h1>
+<code><span class="keyword">class </span><span class="identifier">OpenAutoTriggerLiveData</span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-auto-trigger-live-data/index.html"><span class="identifier">AutoTriggerLiveData</span></a><span class="symbol">&lt;</span><a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">&gt;</span></code>
+<p>AutoTriggerLiveData that allows external sources to post values</p>
+<p><strong>Author</strong><br/>
+Vojtěch Šimša - simsavojtech1@gmail.com</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OpenAutoTriggerLiveData</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A)))/triggerOnActive">triggerOnActive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A)))/triggerOnActiveWithValue">triggerOnActiveWithValue</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ true }<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A)))/disposeOnInactive">disposeOnInactive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A)))/baseValue">baseValue</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A)))/obtainer">obtainer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>AutoTriggerLiveData that allows external sources to post values</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/dispose-on-inactive.html">disposeOnInactive</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">disposeOnInactive</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>dispose obtainer when becoming inactive</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/obtainer.html">obtainer</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">obtainer</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="../-auto-trigger-live-data/index.html#A"><span class="identifier">A</span></a><span class="symbol">&gt;</span></code>
+<p>RX Observable that returns values of expected type to use as values for this livedata instance</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/trigger-on-active.html">triggerOnActive</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">triggerOnActive</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>true if obtainer is to be called every time the instance becomes active</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/trigger-on-active-with-value.html">triggerOnActiveWithValue</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">triggerOnActiveWithValue</span><span class="symbol">: </span><span class="symbol">(</span><a href="../-auto-trigger-live-data/index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>check if obtainer should be called on becoming active based on current value</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="override-value.html">overrideValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">overrideValue</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData$overrideValue(cz.ysqanir.livedatautils.triggered.activity.OpenAutoTriggerLiveData.A)/it">it</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Post itema as value, without any impact on currently running obtainer logic etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/on-active.html">onActive</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onActive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/on-inactive.html">onInactive</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onInactive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-auto-trigger-live-data/trigger.html">trigger</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">trigger</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Trigger obtainer to fetch new value</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html">conditionalDebounce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">conditionalDebounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounceItem">debounceItem</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html">debounce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">debounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$debounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.debounce.T)), kotlin.Long)/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html">getDistinct</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getDistinct</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that limits source emits to distinct only, using basic comparison to determine if item is distinct or not</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html">getDistinctBy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getDistinctBy</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$getDistinctBy(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.getDistinctBy.T)), kotlin.Function2((cz.ysqanir.livedatautils.getDistinctBy.T, , kotlin.Boolean)))/isDistinct">isDistinct</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that limits source emits to distinct only, using provided isDistinct function to determine if item is distinct or not</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

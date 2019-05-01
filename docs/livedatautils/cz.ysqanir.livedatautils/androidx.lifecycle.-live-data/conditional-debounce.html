@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>conditionalDebounce - livedatautils</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">livedatautils</a>&nbsp;/&nbsp;<a href="../index.html">cz.ysqanir.livedatautils</a>&nbsp;/&nbsp;<a href="index.html">androidx.lifecycle.LiveData</a>&nbsp;/&nbsp;<a href="./conditional-debounce.html">conditionalDebounce</a><br/>
+<br/>
+<h1>conditionalDebounce</h1>
+<a name="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">conditionalDebounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounceItem">debounceItem</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+<h3>Parameters</h3>
+<p><a name="debounce"></a>
+<code>debounce</code> - time to debounce source by in milliseconds, default is 1000</p>
+<p><a name="debounceItem"></a>
+<code>debounceItem</code> - function to determine if this item should be handled in usual way (debounced, returning true) or not (overriding debounce and emitting immediately, returning false)</p>
+<p><strong>Author</strong><br/>
+Vojtěch Šimša - simsavojtech1@gmail.com</p>
+</BODY>
+</HTML>

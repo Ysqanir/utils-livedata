@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AutoTriggerLiveData.<init> - livedatautils</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">livedatautils</a>&nbsp;/&nbsp;<a href="../index.html">cz.ysqanir.livedatautils.triggered.activity</a>&nbsp;/&nbsp;<a href="index.html">AutoTriggerLiveData</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData$&lt;init&gt;(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A)))"></a>
+<code><span class="identifier">AutoTriggerLiveData</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A)))/triggerOnActive">triggerOnActive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A)))/triggerOnActiveWithValue">triggerOnActiveWithValue</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ true }<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A)))/disposeOnInactive">disposeOnInactive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A)))/baseValue">baseValue</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData$<init>(kotlin.Boolean, kotlin.Function1((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, kotlin.Boolean)), kotlin.Boolean, cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A, io.reactivex.Observable((cz.ysqanir.livedatautils.triggered.activity.AutoTriggerLiveData.A)))/obtainer">obtainer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>LiveData type that triggers provided data obtainer when it becomes active.
+No operation is taken on errors thrown by obtainer, if any action is to be taken it must be defined by the obtainer itself.</p>
+<h3>Parameters</h3>
+<p><a name="triggerOnActive"></a>
+<code>triggerOnActive</code> - true if obtainer is to be called every time the instance becomes active</p>
+<p><a name="triggerOnActiveWithValue"></a>
+<code>triggerOnActiveWithValue</code> - check if obtainer should be called on becoming active based on current value</p>
+<p><a name="disposeOnInactive"></a>
+<code>disposeOnInactive</code> - dispose obtainer when becoming inactive</p>
+<p><a name="baseValue"></a>
+<code>baseValue</code> - value to initialize instance with</p>
+<p><a name="obtainer"></a>
+<code>obtainer</code> - RX Observable that returns values of expected type to use as values for this livedata instance</p>
+<p><strong>Author</strong><br/>
+Vojtěch Šimša - simsavojtech1@gmail.com</p>
+</BODY>
+</HTML>

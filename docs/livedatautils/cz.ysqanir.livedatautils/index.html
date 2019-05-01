@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cz.ysqanir.livedatautils - livedatautils</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">livedatautils</a>&nbsp;/&nbsp;<a href="./index.html">cz.ysqanir.livedatautils</a><br/>
+<br/>
+<h2>Package cz.ysqanir.livedatautils</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-combinations/index.html">Combinations</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Combinations</span></code>
+<p>Collection of combination utils for LiveData</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="androidx.lifecycle.-live-data/index.html">androidx.lifecycle.LiveData</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="map-data.html">mapData</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span class="symbol">, </span><span class="identifier">C</span><span class="symbol">&gt;</span> <a href="../cz.ysqanir.livedatautils.filter/-filtered-live-data/-filter-result/index.html"><span class="identifier">FilterResult</span></a><span class="symbol">&lt;</span><a href="map-data.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="map-data.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">mapData</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$mapData(cz.ysqanir.livedatautils.filter.FilteredLiveData.FilterResult((cz.ysqanir.livedatautils.mapData.A, cz.ysqanir.livedatautils.mapData.B)), kotlin.Function1((cz.ysqanir.livedatautils.mapData.B, cz.ysqanir.livedatautils.mapData.C)))/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">it</span><span class="symbol">:</span>&nbsp;<a href="map-data.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="map-data.html#C"><span class="identifier">C</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../cz.ysqanir.livedatautils.filter/-filtered-live-data/-filter-result/index.html"><span class="identifier">FilterResult</span></a><span class="symbol">&lt;</span><a href="map-data.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="map-data.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span></code>
+<p>Extension allowing to map FilterResult items without losing attached metadata</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span class="symbol">, </span><span class="identifier">C</span><span class="symbol">&gt;</span> <a href="../cz.ysqanir.livedatautils.filter/-filtered-live-data/index.html"><span class="identifier">FilteredLiveData</span></a><span class="symbol">&lt;</span><a href="map-data.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="map-data.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">mapData</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$mapData(cz.ysqanir.livedatautils.filter.FilteredLiveData((cz.ysqanir.livedatautils.mapData.A, cz.ysqanir.livedatautils.mapData.B)), kotlin.Function1((cz.ysqanir.livedatautils.mapData.B, cz.ysqanir.livedatautils.mapData.C)))/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">it</span><span class="symbol">:</span>&nbsp;<a href="map-data.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="map-data.html#C"><span class="identifier">C</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../cz.ysqanir.livedatautils.filter/-filtered-live-data/-filter-result/index.html"><span class="identifier">FilterResult</span></a><span class="symbol">&lt;</span><a href="map-data.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="map-data.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Extension allowing to map FilterLiveData result items without losing attached metadata</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trigger-on.html">triggerOn</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span class="symbol">&gt;</span> <a href="../cz.ysqanir.livedatautils.triggered.manual/-parametrized-live-data/index.html"><span class="identifier">ParametrizedLiveData</span></a><span class="symbol">&lt;</span><a href="trigger-on.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="trigger-on.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">triggerOn</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$triggerOn(cz.ysqanir.livedatautils.triggered.manual.ParametrizedLiveData((cz.ysqanir.livedatautils.triggerOn.A, cz.ysqanir.livedatautils.triggerOn.B)), androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.triggerOn.A)))/master">master</span><span class="symbol">:</span>&nbsp;<span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="trigger-on.html#A"><span class="identifier">A</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../cz.ysqanir.livedatautils.triggered.manual/-dependent-live-data/index.html"><span class="identifier">DependentLiveData</span></a><span class="symbol">&lt;</span><a href="trigger-on.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="trigger-on.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span></code>
+<p>Extension transforming ParametrizedLiveData to DependentLiveData by attaching it to provided master</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

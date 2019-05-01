@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cz.ysqanir.livedatautils.androidx.lifecycle.LiveData - livedatautils</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">livedatautils</a>&nbsp;/&nbsp;<a href="../index.html">cz.ysqanir.livedatautils</a>&nbsp;/&nbsp;<a href="./index.html">androidx.lifecycle.LiveData</a><br/>
+<br/>
+<h3>Extensions for androidx.lifecycle.LiveData</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="conditional-debounce.html">conditionalDebounce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">conditionalDebounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounceItem">debounceItem</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="debounce.html">debounce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">debounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$debounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.debounce.T)), kotlin.Long)/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-distinct.html">getDistinct</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="get-distinct.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getDistinct</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="get-distinct.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that limits source emits to distinct only, using basic comparison to determine if item is distinct or not</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-distinct-by.html">getDistinctBy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getDistinctBy</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$getDistinctBy(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.getDistinctBy.T)), kotlin.Function2((cz.ysqanir.livedatautils.getDistinctBy.T, , kotlin.Boolean)))/isDistinct">isDistinct</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that limits source emits to distinct only, using provided isDistinct function to determine if item is distinct or not</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FilteredLiveData - livedatautils</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">livedatautils</a>&nbsp;/&nbsp;<a href="../index.html">cz.ysqanir.livedatautils.filter</a>&nbsp;/&nbsp;<a href="./index.html">FilteredLiveData</a><br/>
+<br/>
+<h1>FilteredLiveData</h1>
+<code><span class="keyword">class </span><span class="identifier">FilteredLiveData</span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">MediatorLiveData</span><span class="symbol">&lt;</span><a href="-filter-result/index.html"><span class="identifier">FilterResult</span></a><span class="symbol">&lt;</span><a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>LiveData type that emits items from provided source filtered by provided filter logic</p>
+<h3>Parameters</h3>
+<p><a name="defaultFilterValue"></a>
+<code>defaultFilterValue</code> - default value for the filter, representing "no filter applied"</p>
+<p><a name="source"></a>
+<code>source</code> - source stream of items</p>
+<p><a name="filter"></a>
+<code>filter</code> - function to perform on each item emitted by source with current filter value and corresponding source item as params</p>
+<p><a name="isResultEqual"></a>
+<code>isResultEqual</code> - function to check if item emitted by source changed by applying filter. Must return true if sets are equal. Default is simple comparison.</p>
+<p><a name="isFilterEqual"></a>
+<code>isFilterEqual</code> - function to check if provided filter values are the same, used to determine if any filter is applied (current filter value is not equal to default). Default is simple comparison.</p>
+<p><strong>Author</strong><br/>
+Vojtěch Šimša - simsavojtech1@gmail.com</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-filter-result/index.html">FilterResult</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">FilterResult</span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span class="symbol">&gt;</span></code>
+<p>Data class wrapping current filter result</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FilteredLiveData</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils.filter.FilteredLiveData$<init>(cz.ysqanir.livedatautils.filter.FilteredLiveData.A, androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.filter.FilteredLiveData.B)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, cz.ysqanir.livedatautils.filter.FilteredLiveData.B, )), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.B, , kotlin.Boolean)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, , kotlin.Boolean)))/defaultFilterValue">defaultFilterValue</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.filter.FilteredLiveData$<init>(cz.ysqanir.livedatautils.filter.FilteredLiveData.A, androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.filter.FilteredLiveData.B)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, cz.ysqanir.livedatautils.filter.FilteredLiveData.B, )), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.B, , kotlin.Boolean)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, , kotlin.Boolean)))/source">source</span><span class="symbol">:</span>&nbsp;<span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.filter.FilteredLiveData$<init>(cz.ysqanir.livedatautils.filter.FilteredLiveData.A, androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.filter.FilteredLiveData.B)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, cz.ysqanir.livedatautils.filter.FilteredLiveData.B, )), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.B, , kotlin.Boolean)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, , kotlin.Boolean)))/filter">filter</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">a</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">b</span><span class="symbol">:</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.filter.FilteredLiveData$<init>(cz.ysqanir.livedatautils.filter.FilteredLiveData.A, androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.filter.FilteredLiveData.B)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, cz.ysqanir.livedatautils.filter.FilteredLiveData.B, )), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.B, , kotlin.Boolean)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, , kotlin.Boolean)))/isResultEqual">isResultEqual</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">original</span><span class="symbol">:</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">filtered</span><span class="symbol">:</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ a, b -&gt; a == b }<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils.filter.FilteredLiveData$<init>(cz.ysqanir.livedatautils.filter.FilteredLiveData.A, androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.filter.FilteredLiveData.B)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, cz.ysqanir.livedatautils.filter.FilteredLiveData.B, )), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.B, , kotlin.Boolean)), kotlin.Function2((cz.ysqanir.livedatautils.filter.FilteredLiveData.A, , kotlin.Boolean)))/isFilterEqual">isFilterEqual</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">a</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<span class="identifier">b</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ a, b -&gt; a == b }<span class="symbol">)</span></code>
+<p>LiveData type that emits items from provided source filtered by provided filter logic</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="default-filter-value.html">defaultFilterValue</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultFilterValue</span><span class="symbol">: </span><a href="index.html#A"><span class="identifier">A</span></a></code>
+<p>default value for the filter, representing "no filter applied"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter.html">filter</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">filter</span><span class="symbol">: </span><span class="symbol">(</span><span class="identifier">a</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">b</span><span class="symbol">:</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a></code>
+<p>function to perform on each item emitted by source with current filter value and corresponding source item as params</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-filter-equal.html">isFilterEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isFilterEqual</span><span class="symbol">: </span><span class="symbol">(</span><span class="identifier">a</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<span class="identifier">b</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>function to check if provided filter values are the same, used to determine if any filter is applied (current filter value is not equal to default). Default is simple comparison.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-result-equal.html">isResultEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isResultEqual</span><span class="symbol">: </span><span class="symbol">(</span><span class="identifier">original</span><span class="symbol">:</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">filtered</span><span class="symbol">:</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>function to check if item emitted by source changed by applying filter. Must return true if sets are equal. Default is simple comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="init-filter.html">initFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initFilter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Set filter back to initial state and emit last source item with applied default filter</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-filter-applied.html">isFilterApplied</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isFilterApplied</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Check if current filter is different from default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-filter.html">updateFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateFilter</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils.filter.FilteredLiveData$updateFilter(cz.ysqanir.livedatautils.filter.FilteredLiveData.A)/newFilter">newFilter</span><span class="symbol">:</span>&nbsp;<a href="index.html#A"><span class="identifier">A</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Update current filter and apply it to last source item, emitting new item with current filter</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html">conditionalDebounce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">conditionalDebounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">, </span><span class="identifier" id="cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))/debounceItem">debounceItem</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html">debounce</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">debounce</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$debounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.debounce.T)), kotlin.Long)/debounce">debounce</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that debounces original source by given time, limiting item emits.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html">getDistinct</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getDistinct</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that limits source emits to distinct only, using basic comparison to determine if item is distinct or not</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html">getDistinctBy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getDistinctBy</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$getDistinctBy(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.getDistinctBy.T)), kotlin.Function2((cz.ysqanir.livedatautils.getDistinctBy.T, , kotlin.Boolean)))/isDistinct">isDistinct</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Extension for LiveData that limits source emits to distinct only, using provided isDistinct function to determine if item is distinct or not</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../cz.ysqanir.livedatautils/map-data.html">mapData</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span class="symbol">, </span><span class="identifier">C</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">FilteredLiveData</span></a><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/map-data.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="../../cz.ysqanir.livedatautils/map-data.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">mapData</span><span class="symbol">(</span><span class="identifier" id="cz.ysqanir.livedatautils$mapData(cz.ysqanir.livedatautils.filter.FilteredLiveData((cz.ysqanir.livedatautils.mapData.A, cz.ysqanir.livedatautils.mapData.B)), kotlin.Function1((cz.ysqanir.livedatautils.mapData.B, cz.ysqanir.livedatautils.mapData.C)))/mapper">mapper</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">it</span><span class="symbol">:</span>&nbsp;<a href="../../cz.ysqanir.livedatautils/map-data.html#B"><span class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../cz.ysqanir.livedatautils/map-data.html#C"><span class="identifier">C</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="-filter-result/index.html"><span class="identifier">FilterResult</span></a><span class="symbol">&lt;</span><a href="../../cz.ysqanir.livedatautils/map-data.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="../../cz.ysqanir.livedatautils/map-data.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Extension allowing to map FilterLiveData result items without losing attached metadata</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

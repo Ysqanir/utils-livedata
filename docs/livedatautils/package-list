@@ -1,0 +1,10 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:cz.ysqanir.livedatautils$conditionalDebounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.conditionalDebounce.T)), kotlin.Long, kotlin.Function1((cz.ysqanir.livedatautils.conditionalDebounce.T, kotlin.Boolean)))cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/conditional-debounce.html
+$dokka.location:cz.ysqanir.livedatautils$debounce(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.debounce.T)), kotlin.Long)cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/debounce.html
+$dokka.location:cz.ysqanir.livedatautils$getDistinct(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.getDistinct.T)))cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct.html
+$dokka.location:cz.ysqanir.livedatautils$getDistinctBy(androidx.lifecycle.LiveData((cz.ysqanir.livedatautils.getDistinctBy.T)), kotlin.Function2((cz.ysqanir.livedatautils.getDistinctBy.T, , kotlin.Boolean)))cz.ysqanir.livedatautils/androidx.lifecycle.-live-data/get-distinct-by.html
+cz.ysqanir.livedatautils
+cz.ysqanir.livedatautils.filter
+cz.ysqanir.livedatautils.triggered.activity
+cz.ysqanir.livedatautils.triggered.manual
