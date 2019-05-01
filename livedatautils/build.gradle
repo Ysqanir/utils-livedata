@@ -30,8 +30,8 @@ ext {
 android {
     compileSdkVersion 28
     dokka {
-        outputFormat = 'html'
-        outputDirectory = "$buildDir/javadoc"
+        outputFormat = 'markdown'
+        outputDirectory = "$rootDir/docs"
     }
 
     defaultConfig {
