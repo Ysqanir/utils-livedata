@@ -39,7 +39,7 @@ class FilteredLiveData<A, B>(protected val defaultFilterValue: A,
                                 source)) {
                     filter(it.first, it.second)
                             .let { filtered ->
-                                FilterResult(it.first, filtered, isResultEqual(it.second, filtered))
+                                FilterResult(it.first, filtered, !isResultEqual(it.second, filtered))
                             }
                 })
         { postValue(it) }

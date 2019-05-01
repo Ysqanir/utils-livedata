@@ -13,17 +13,17 @@ import io.reactivex.disposables.Disposable
  *
  * @author Vojtěch Šimša <simsavojtech1@gmail.com>
  */
-class ParametrizedLiveData<B, A>(
-        val disposeOnInactive: Boolean = false,
-        baseValue: A? = null,
-        val obtainerSource: (parameter: B) -> Observable<A>) : LiveData<A>() {
+class ParametrizedLiveData<A, B>(
+        protected val disposeOnInactive: Boolean = false,
+        baseValue: B? = null,
+        protected val obtainerSource: (parameter: A) -> Observable<B>) : LiveData<B>() {
     init {
         value = baseValue
     }
 
     var disposables = mutableListOf<Disposable>()
 
-    fun trigger(parameter: B) {
+    fun trigger(parameter: A) {
         clearDisposables()
         disposables.add(
                 obtainerSource(parameter)
